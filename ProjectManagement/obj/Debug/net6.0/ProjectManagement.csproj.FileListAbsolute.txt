@@ -25,3 +25,5 @@ C:\Users\90544\source\repos\WebApiCourse\ProjectManagement\obj\Debug\net6.0\refi
 C:\Users\90544\source\repos\WebApiCourse\ProjectManagement\obj\Debug\net6.0\ProjectManagement.pdb
 C:\Users\90544\source\repos\WebApiCourse\ProjectManagement\obj\Debug\net6.0\ProjectManagement.genruntimeconfig.cache
 C:\Users\90544\source\repos\WebApiCourse\ProjectManagement\obj\Debug\net6.0\ref\ProjectManagement.dll
+C:\Users\90544\source\repos\WebApiCourse\ProjectManagement\bin\Debug\net6.0\Entities.dll
+C:\Users\90544\source\repos\WebApiCourse\ProjectManagement\bin\Debug\net6.0\Entities.pdb
