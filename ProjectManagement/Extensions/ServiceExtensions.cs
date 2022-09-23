@@ -2,6 +2,8 @@
 using LoggerService;
 using Microsoft.EntityFrameworkCore;
 using Repository;
+using Service;
+using ServiceContracts;
 
 namespace ProjectManagement.Extensions
 {
@@ -31,6 +33,14 @@ namespace ProjectManagement.Extensions
                 options.UseSqlServer(configuration.GetConnectionString("sqlconnection"),
                 project => project.MigrationsAssembly("ProjectManagement"))
             );
+        }
+        public static void ConfigureRepositoryManager(this IServiceCollection services)
+        {
+            services.AddScoped<IRepositoryManager, RepositoryManager>();
+        }
+        public static void ConfigureServiceManager(this IServiceCollection services)
+        {
+            services.AddScoped<IServiceManager, ServiceManager>();
         }
     }
 }

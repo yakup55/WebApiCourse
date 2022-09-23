@@ -3,12 +3,14 @@ using LoggerService;
 using NLog;
 using ProjectManagement.Extensions;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
+LogManager.LoadConfiguration(String.Concat(Directory.GetCurrentDirectory(), "/nlog.config"));
 // Add services to the container.
-//LogManager.LoadConfiguration(String.Concat(Directory.GetCurrentDirectory(), "/nlog.config"));
 
-// Add services to the container.
+//controller tasýndý
+builder.Services.AddControllers().AddApplicationPart(typeof(ProjectManagement.Presentation.AssemblyReference).Assembly);
 
 
 builder.Services.AddEndpointsApiExplorer();
@@ -16,9 +18,17 @@ builder.Services.AddSwaggerGen();
 builder.Services.ConfigureCors();
 builder.Services.ConfigureLoggerManager();
 builder.Services.ConfigureSqlContext(builder.Configuration);
+builder.Services.ConfigureRepositoryManager();
+builder.Services.ConfigureServiceManager();
 
-//builder.Services.AddSingleton<ILoggerManager, LoggerManager>();
+
 var app = builder.Build();
+
+var logger = app.Services.GetRequiredService<ILoggerManager>();
+
+
+if (app.Environment.IsProduction())
+    app.UseHsts();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -27,11 +37,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors("CorsPolicy");
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors("CorsPolicy");
 
 app.Run();

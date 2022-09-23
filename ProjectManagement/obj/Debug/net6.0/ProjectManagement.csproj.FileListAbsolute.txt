@@ -68,3 +68,13 @@ C:\Users\90544\source\repos\WebApiCourse\ProjectManagement\bin\Debug\net6.0\runt
 C:\Users\90544\source\repos\WebApiCourse\ProjectManagement\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\90544\source\repos\WebApiCourse\ProjectManagement\bin\Debug\net6.0\Repository.dll
 C:\Users\90544\source\repos\WebApiCourse\ProjectManagement\bin\Debug\net6.0\Repository.pdb
+C:\Users\90544\source\repos\WebApiCourse\ProjectManagement\bin\Debug\net6.0\nlog.config
+C:\Users\90544\source\repos\WebApiCourse\ProjectManagement\bin\Debug\net6.0\Service.dll
+C:\Users\90544\source\repos\WebApiCourse\ProjectManagement\bin\Debug\net6.0\ServiceContracts.dll
+C:\Users\90544\source\repos\WebApiCourse\ProjectManagement\bin\Debug\net6.0\ServiceContracts.pdb
+C:\Users\90544\source\repos\WebApiCourse\ProjectManagement\bin\Debug\net6.0\Service.pdb
+C:\Users\90544\source\repos\WebApiCourse\ProjectManagement\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\90544\source\repos\WebApiCourse\ProjectManagement\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\90544\source\repos\WebApiCourse\ProjectManagement\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\90544\source\repos\WebApiCourse\ProjectManagement\bin\Debug\net6.0\ProjectManagement.Presentation.dll
+C:\Users\90544\source\repos\WebApiCourse\ProjectManagement\bin\Debug\net6.0\ProjectManagement.Presentation.pdb

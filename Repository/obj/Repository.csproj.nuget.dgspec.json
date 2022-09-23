@@ -31,7 +31,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\90544\\source\\repos\\WebApiCourse\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\90544\\source\\repos\\WebApiCourse\\Entities\\Entities.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

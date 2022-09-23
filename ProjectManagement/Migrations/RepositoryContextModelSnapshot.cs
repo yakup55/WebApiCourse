@@ -24,12 +24,10 @@ namespace ProjectManagement.Migrations
 
             modelBuilder.Entity("Entities.Models.Employee", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
+                        .HasColumnType("uniqueidentifier")
                         .HasColumnName("EmployeeId");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int>("Age")
                         .HasColumnType("int");
@@ -54,6 +52,17 @@ namespace ProjectManagement.Migrations
                     b.HasIndex("ProjectId");
 
                     b.ToTable("Employees");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("9a13fdc9-4167-405b-8e40-1cde0bdee2a6"),
+                            Age = 19,
+                            FirstName = "YAKUP",
+                            LastName = "YILDIRIM",
+                            Position = "Senior Developer",
+                            ProjectId = new Guid("b2d3b0df-6c13-4d20-8d3d-09b003acc13f")
+                        });
                 });
 
             modelBuilder.Entity("Entities.Models.Project", b =>
@@ -80,6 +89,15 @@ namespace ProjectManagement.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Projects");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("b2d3b0df-6c13-4d20-8d3d-09b003acc13f"),
+                            Description = "Web Aplication Programing Interface",
+                            Field = "Computer Science",
+                            Name = "ASP.NET CORE Web API Project"
+                        });
                 });
 
             modelBuilder.Entity("Entities.Models.Employee", b =>

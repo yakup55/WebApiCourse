@@ -10,3 +10,6 @@ C:\Users\90544\source\repos\WebApiCourse\Contracts\obj\Debug\net6.0\Contracts.dl
 C:\Users\90544\source\repos\WebApiCourse\Contracts\obj\Debug\net6.0\refint\Contracts.dll
 C:\Users\90544\source\repos\WebApiCourse\Contracts\obj\Debug\net6.0\Contracts.pdb
 C:\Users\90544\source\repos\WebApiCourse\Contracts\obj\Debug\net6.0\ref\Contracts.dll
+C:\Users\90544\source\repos\WebApiCourse\Contracts\bin\Debug\net6.0\Entities.dll
+C:\Users\90544\source\repos\WebApiCourse\Contracts\bin\Debug\net6.0\Entities.pdb
+C:\Users\90544\source\repos\WebApiCourse\Contracts\obj\Debug\net6.0\Contracts.csproj.CopyComplete

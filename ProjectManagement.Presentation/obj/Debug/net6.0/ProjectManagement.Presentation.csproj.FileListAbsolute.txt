@@ -1,0 +1,17 @@
+C:\Users\90544\source\repos\WebApiCourse\ProjectManagement.Presentation\bin\Debug\net6.0\ProjectManagement.Presentation.deps.json
+C:\Users\90544\source\repos\WebApiCourse\ProjectManagement.Presentation\bin\Debug\net6.0\ProjectManagement.Presentation.dll
+C:\Users\90544\source\repos\WebApiCourse\ProjectManagement.Presentation\bin\Debug\net6.0\ProjectManagement.Presentation.pdb
+C:\Users\90544\source\repos\WebApiCourse\ProjectManagement.Presentation\bin\Debug\net6.0\Entities.dll
+C:\Users\90544\source\repos\WebApiCourse\ProjectManagement.Presentation\bin\Debug\net6.0\ServiceContracts.dll
+C:\Users\90544\source\repos\WebApiCourse\ProjectManagement.Presentation\bin\Debug\net6.0\ServiceContracts.pdb
+C:\Users\90544\source\repos\WebApiCourse\ProjectManagement.Presentation\bin\Debug\net6.0\Entities.pdb
+C:\Users\90544\source\repos\WebApiCourse\ProjectManagement.Presentation\obj\Debug\net6.0\ProjectManagement.Presentation.csproj.AssemblyReference.cache
+C:\Users\90544\source\repos\WebApiCourse\ProjectManagement.Presentation\obj\Debug\net6.0\ProjectManagement.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\90544\source\repos\WebApiCourse\ProjectManagement.Presentation\obj\Debug\net6.0\ProjectManagement.Presentation.AssemblyInfoInputs.cache
+C:\Users\90544\source\repos\WebApiCourse\ProjectManagement.Presentation\obj\Debug\net6.0\ProjectManagement.Presentation.AssemblyInfo.cs
+C:\Users\90544\source\repos\WebApiCourse\ProjectManagement.Presentation\obj\Debug\net6.0\ProjectManagement.Presentation.csproj.CoreCompileInputs.cache
+C:\Users\90544\source\repos\WebApiCourse\ProjectManagement.Presentation\obj\Debug\net6.0\ProjectManagement.Presentation.csproj.CopyComplete
+C:\Users\90544\source\repos\WebApiCourse\ProjectManagement.Presentation\obj\Debug\net6.0\ProjectManagement.Presentation.dll
+C:\Users\90544\source\repos\WebApiCourse\ProjectManagement.Presentation\obj\Debug\net6.0\refint\ProjectManagement.Presentation.dll
+C:\Users\90544\source\repos\WebApiCourse\ProjectManagement.Presentation\obj\Debug\net6.0\ProjectManagement.Presentation.pdb
+C:\Users\90544\source\repos\WebApiCourse\ProjectManagement.Presentation\obj\Debug\net6.0\ref\ProjectManagement.Presentation.dll
