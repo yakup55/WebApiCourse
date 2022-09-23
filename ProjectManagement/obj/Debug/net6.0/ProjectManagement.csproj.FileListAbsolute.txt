@@ -78,3 +78,7 @@ C:\Users\90544\source\repos\WebApiCourse\ProjectManagement\bin\Debug\net6.0\Micr
 C:\Users\90544\source\repos\WebApiCourse\ProjectManagement\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\90544\source\repos\WebApiCourse\ProjectManagement\bin\Debug\net6.0\ProjectManagement.Presentation.dll
 C:\Users\90544\source\repos\WebApiCourse\ProjectManagement\bin\Debug\net6.0\ProjectManagement.Presentation.pdb
+C:\Users\90544\source\repos\WebApiCourse\ProjectManagement\bin\Debug\net6.0\Shared.dll
+C:\Users\90544\source\repos\WebApiCourse\ProjectManagement\bin\Debug\net6.0\Shared.pdb
+C:\Users\90544\source\repos\WebApiCourse\ProjectManagement\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\90544\source\repos\WebApiCourse\ProjectManagement\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

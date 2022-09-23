@@ -1,9 +1,11 @@
 ﻿using Entities.Models;
+using Shared.DataTransferObjects;
 
 namespace ServiceContracts
 {
     public interface IProjectService
     {
-        IEnumerable<Project> GetAllProject(bool tranckChanges);
+        IEnumerable<ProjectDto> GetAllProject(bool tranckChanges);
+        ProjectDto GetOneById(Guid id, bool tranChanges);
     }
 }

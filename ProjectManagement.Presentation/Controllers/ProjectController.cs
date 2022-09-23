@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Entities.Models;
+using Microsoft.AspNetCore.Mvc;
 using ServiceContracts;
 using System;
 using System.Collections.Generic;
@@ -28,7 +29,16 @@ namespace ProjectManagement.Presentation.Controllers
         [HttpGet("{id:guid}")]
         public IActionResult GetOneProject(Guid id)
         {
-            return null;
+            try
+            {
+                var project = serviceManager.ProjectService.GetOneById(id, false);
+                return Ok(project);
+            }
+            catch (Exception)
+            {
+
+              return  StatusCode(500, "Internal Error");
+            }
         }
     }
 
