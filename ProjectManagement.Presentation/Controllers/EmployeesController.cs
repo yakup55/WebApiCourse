@@ -21,31 +21,14 @@ namespace ProjectManagement.Presentation.Controllers
         [HttpGet]
         public IActionResult GetAllEmployeeByProjectId(Guid projectId)
         {
-           
-            try
-            {
                 var list = serviceManager.EmployeeService.GetAllEmployeesByProjectId(projectId, false);
                 return Ok(list);
-            }
-            catch (Exception)
-            {
-                return StatusCode(500, "Internall Error");
-                throw;
-            }
         }
         [HttpGet("{id:guid}")]
         public IActionResult GetOneEmployeeByProjectId(Guid projectId,Guid id)
         {
-            try
-            {
                 var employee = serviceManager.EmployeeService.GetOneEmployeeByProjectId(projectId, id, false);
                 return Ok(employee);
-            }
-            catch (Exception)
-            {
-                return StatusCode(500, "Internall Error");
-                throw;
-            }
         }
     }
 }

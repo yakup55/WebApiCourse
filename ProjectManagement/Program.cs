@@ -23,6 +23,12 @@ builder.Services.ConfigureServiceManager();
 builder.Services.AddAutoMapper(typeof(Program));
 
 var app = builder.Build();
+var logger1 = app.Services.GetRequiredService<ILoggerManager>();
+app.ConfigureExceptionHandler(logger1);
+if (app.Environment.IsProduction())
+{
+    app.UseHsts();
+}
 
 var logger = app.Services.GetRequiredService<ILoggerManager>();
 

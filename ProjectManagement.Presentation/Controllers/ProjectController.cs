@@ -29,16 +29,8 @@ namespace ProjectManagement.Presentation.Controllers
         [HttpGet("{id:guid}")]
         public IActionResult GetOneProject(Guid id)
         {
-            try
-            {
                 var project = serviceManager.ProjectService.GetOneById(id, false);
                 return Ok(project);
-            }
-            catch (Exception)
-            {
-
-              return  StatusCode(500, "Internal Error");
-            }
         }
     }
 

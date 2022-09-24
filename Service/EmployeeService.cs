@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Contracts;
+using Entities.Exceptions;
 using Entities.Models;
 using ServiceContracts;
 using Shared.DataTransferObjects;
@@ -21,32 +22,36 @@ namespace Service
 
         public IEnumerable<EmployeeDto> GetAllEmployeesByProjectId(Guid projectId, bool tranckChanges)
         {
-            try
-            {
+            CheckProjectExits(projectId);
                 var emploList = repositoryManager.Employee.GetEmployeesByProjectId(projectId, tranckChanges);
                 var employeeDtos = mapper.Map < IEnumerable<EmployeeDto>>(emploList);
                 return employeeDtos;
-            }
-            catch (Exception e)
-            {
-                loggerManager.LogError("EmployeeService.GetAllEmployeesByProjectId:" + e.Message);
-                throw;
-            }
+           
         }
 
         public EmployeeDto GetOneEmployeeByProjectId(Guid projectId, Guid employeeId, bool tranChanges)
         {
-            try
+            CheckProjectExits(projectId);
+            
+            
+            var list = repositoryManager.Employee.GetEmployeeByProjectId(projectId, employeeId, tranChanges);
+            if (list is null)
             {
-                var list = repositoryManager.Employee.GetEmployeeByProjectId(projectId, employeeId, tranChanges);
-                var employeeDtos = mapper.Map<EmployeeDto>(list);
-                return employeeDtos;    
+                throw new EmpleyooNotFoundException(employeeId);
             }
-            catch (Exception e)
+            var employeeDtos = mapper.Map<EmployeeDto>(list);
+                return employeeDtos;    
+        }
+        //Bunu yazarak hata kontrollerini kolay kullanma sunduk
+        private void CheckProjectExits(Guid projectId)
+        {
+            var project = repositoryManager.Project.GetProject(projectId, false);
+            if (project is null)
             {
-                loggerManager.LogError("EmployeeService.GetAllEmployeesByProjectId:" + e.Message);
-                throw;
+                throw new ProjectNotFoundException(projectId);
             }
         }
+       
+       
     }
 }

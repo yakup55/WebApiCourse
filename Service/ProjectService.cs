@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Contracts;
+using Entities.Exceptions;
 using Entities.Models;
 using ServiceContracts;
 using Shared.DataTransferObjects;
@@ -10,7 +11,7 @@ namespace Service
     {
         private readonly IRepositoryManager repositoryManager;
         private readonly ILoggerManager loggerManager;
-        private readonly IMapper mapper; 
+        private readonly IMapper mapper;
 
         public ProjectService(IRepositoryManager repositoryManager, ILoggerManager loggerManager, IMapper mapper)
         {
@@ -21,36 +22,21 @@ namespace Service
 
         public IEnumerable<ProjectDto> GetAllProject(bool tranckChanges)
         {
-            try
-            {
-            var project = repositoryManager.Project.GetAllProjects(tranckChanges);
-                var projectDtos=mapper.Map<IEnumerable<ProjectDto>>(project);
-                return projectDtos;
-           
-            }
-            catch (Exception e)
-            {
-                loggerManager.LogError("ProjectService.GetAllProjects() has an error:" + e.Message);
-                throw;
-            }
 
+            var project = repositoryManager.Project.GetAllProjects(tranckChanges);
+            var projectDtos = mapper.Map<IEnumerable<ProjectDto>>(project);
+            return projectDtos;
         }
 
         public ProjectDto GetOneById(Guid id, bool tranChanges)
         {
-            try
+            var project = repositoryManager.Project.GetProject(id, tranChanges);
+            if (project is null)
             {
-              var project  = repositoryManager.Project.GetProject(id, tranChanges);
-                var projectDto = mapper.Map<ProjectDto>(project);
-                return projectDto;
-
+                throw new ProjectNotFoundException(id);
             }
-            catch (Exception e)
-            {
-                loggerManager.LogError("ProjecrRepository.GetProject():"+e.Message);
-                throw;
-            }
-
+            var projectDto = mapper.Map<ProjectDto>(project);
+            return projectDto;
         }
     }
 }
